@@ -11,13 +11,13 @@ export const BottomNavigation = () => (
     maxWidth="48rem"
     py={4}
   >
-    <ChakraLink isExternal href="/" flexGrow={1} ml={4} mr={2}>
+    <ChakraLink href="/" flexGrow={1} ml={4} mr={2}>
       <Button width="100%" variant="solid" colorScheme="gray">
         Create Account
       </Button>
     </ChakraLink>
 
-    <ChakraLink isExternal href="/" flexGrow={3} ml={2} mr={4}>
+    <ChakraLink href="/" flexGrow={3} ml={2} mr={4}>
       <Button width="100%" variant="solid" colorScheme="purple">
         Sign In
       </Button>

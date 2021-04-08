@@ -47,8 +47,20 @@ const Index = () => (
           </ChakraLink>
         </ListItem>
         <ListItem>
-          <ChakraLink isExternal href="/center" flexGrow={1} mr={2}>
+          <ChakraLink href="/center" flexGrow={1} mr={2}>
             Center Demo
+            <LinkIcon />
+          </ChakraLink>
+        </ListItem>
+        <ListItem>
+          <ChakraLink href="/stream" flexGrow={1} mr={2}>
+            Stream Demo
+            <LinkIcon />
+          </ChakraLink>
+        </ListItem>
+        <ListItem>
+          <ChakraLink href="/force" flexGrow={1} mr={2}>
+            Force Demo
             <LinkIcon />
           </ChakraLink>
         </ListItem>
