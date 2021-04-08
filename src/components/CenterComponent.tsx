@@ -12,8 +12,9 @@ export const CenterComponent = () => (
   <Box
     h="100vh"
     w="100%"
-    backgroundPosition="center"
-    backgroundImage={`url("https://static.seekingalpha.com/uploads/2020/6/8/saupload_getty_483601959_2000132420009280395_142366.jpg")`}
+    bg="#F4F0F0"
+    //   backgroundPosition="center"
+    //   backgroundImage={`url("https://static.seekingalpha.com/uploads/2020/6/8/saupload_getty_483601959_2000132420009280395_142366.jpg")`}
   >
     <Container h="100vh" p="0px" bg="none" maxW="container.xl">
       <Center bg="white" w="100%" h="4rem">
@@ -45,14 +46,16 @@ export const CenterComponent = () => (
           <GridItem
             bg="white"
             borderRadius=".125rem 1rem .125rem .125rem"
+            boxShadow="0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%)"
             // minWidth="375px"
             // height="100%"
             sx={{ "--aspect-ratio": "1 / 1.618" }}
           ></GridItem>
           <GridItem bg="none" height="100%"></GridItem>
           <GridItem
-            borderRadius=" 1rem .125rem .125rem .125rem"
             bg="white"
+            borderRadius=" 1rem .125rem .125rem .125rem"
+            boxShadow="0 50px 100px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%)"
             // minHeight="100%"
             sx={{ "--aspect-ratio": "1 / 1" }}
           ></GridItem>

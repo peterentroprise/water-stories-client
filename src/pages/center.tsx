@@ -1,5 +1,5 @@
 import { CenterComponent } from "../components/CenterComponent";
 
-const Guide = () => <CenterComponent />;
+const Center = () => <CenterComponent />;
 
-export default Guide;
+export default Center;
