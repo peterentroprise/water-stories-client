@@ -1,10 +1,11 @@
 import {
+  Grid,
+  GridItem,
   Box,
-  Center,
   Flex,
+  Center,
   Text,
   Container,
-  AspectRatio,
 } from "@chakra-ui/react";
 
 export const CenterComponent = () => (
@@ -14,51 +15,49 @@ export const CenterComponent = () => (
     backgroundPosition="center"
     backgroundImage={`url("https://static.seekingalpha.com/uploads/2020/6/8/saupload_getty_483601959_2000132420009280395_142366.jpg")`}
   >
-    <Container
-      h="100vh"
-      p="0px"
-      bg="gray"
-      maxW="container.sm"
-      pl="4rem"
-      pr="4rem"
-    >
-      <Center bg="yellow" w="100%" mb="4rem">
-        Stretchy Aspect Ratio Thing
+    <Container h="100vh" p="0px" bg="none" maxW="container.xl">
+      <Center bg="white" w="100%" h="4rem">
+        <Text>Stretchy Aspect Ratio Thing</Text>
       </Center>
-      <Box
-        className="grid"
-        bg="yellow"
-        display="grid"
-        gridTemplateColumns="1fr 1.618fr"
-        placeItems="start"
-        sx={{
-          "*": {
-            width: "100%",
-          },
-          "*::before": {
-            content: '""',
-            display: "inline-block",
-            width: "1px",
-            height: 0,
-            paddingBottom: "calc(100% / (var(--aspect-ratio)))",
-          },
-        }}
+      <Flex
+        flexDirection="column"
+        justifyContent="center"
+        height="calc(100% - 4rem)"
       >
-        <Box
+        <Grid
+          ml="4rem"
+          mr="4rem"
+          gridTemplateColumns="1fr 1rem 1.618fr"
+          placeItems="start"
           sx={{
-            "--aspect-ratio": "1 / 1.618",
-            backgroundColor: "red",
-            // width: "200px",
-            height: "100%",
+            "*": {
+              width: "100%",
+            },
+            "*::before": {
+              content: '""',
+              display: "inline-block",
+              width: "1px",
+              height: 0,
+              paddingBottom: "calc(100% / (var(--aspect-ratio)))",
+            },
           }}
         >
-          1 / 1.618
-        </Box>
-        <Box sx={{ "--aspect-ratio": "1 / 1", backgroundColor: "blue" }}>
-          1 / 1
-        </Box>
-      </Box>
-      {/* </AspectRatio> */}
+          <GridItem
+            bg="white"
+            borderRadius=".125rem 1rem .125rem .125rem"
+            // minWidth="375px"
+            // height="100%"
+            sx={{ "--aspect-ratio": "1 / 1.618" }}
+          ></GridItem>
+          <GridItem bg="none" height="100%"></GridItem>
+          <GridItem
+            borderRadius=" 1rem .125rem .125rem .125rem"
+            bg="white"
+            // minHeight="100%"
+            sx={{ "--aspect-ratio": "1 / 1" }}
+          ></GridItem>
+        </Grid>
+      </Flex>
     </Container>
   </Box>
 );
