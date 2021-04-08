@@ -44,7 +44,6 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        // fontWeight: "bold",
         borderRadius: "16px",
       },
     },

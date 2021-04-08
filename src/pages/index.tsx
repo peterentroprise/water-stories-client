@@ -5,7 +5,7 @@ import { Hero } from "../components/Hero";
 import { Container } from "../components/Container";
 import { Main } from "../components/Main";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
-import { CTA } from "../components/CTA";
+import { BottomNavigation } from "../components/BottomNavigation";
 import { Footer } from "../components/Footer";
 
 const Index = () => (
@@ -43,6 +43,12 @@ const Index = () => (
             mr={2}
           >
             Elemental Ecosystems
+            <LinkIcon />
+          </ChakraLink>
+        </ListItem>
+        <ListItem>
+          <ChakraLink isExternal href="/guide" flexGrow={1} mr={2}>
+            Guide
             <LinkIcon />
           </ChakraLink>
         </ListItem>
@@ -98,7 +104,7 @@ const Index = () => (
     <Footer>
       <Text>Entroprise © 2021</Text>
     </Footer>
-    <CTA />
+    <BottomNavigation />
   </Container>
 );
 
