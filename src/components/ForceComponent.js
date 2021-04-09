@@ -97,7 +97,7 @@ const HighlightGraph = () => {
       nodeCanvasObjectMode={(node) =>
         highlightNodes.has(node) ? "before" : undefined
       }
-      nodeCanvasObject={paintRing}
+      nodeThreeObject={paintRing}
       onNodeHover={handleNodeHover}
       onLinkHover={handleLinkHover}
     />
