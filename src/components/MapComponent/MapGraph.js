@@ -24,7 +24,6 @@ const MapGraph = () => {
   if (graphData != null)
     return (
       <>
-        <MapNode label="Me" level={1} />
         <ForceGraph3D
           graphData={graphData}
           numDimensions={2}
