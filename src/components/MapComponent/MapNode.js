@@ -12,6 +12,8 @@ const MapNode = ({ label, level }) => {
           borderRadius: "8px",
           paddingLeft: "8px",
           paddingRight: "8px",
+          paddingTop: "8px",
+          paddingBottom: "8px",
           textAlign: "center",
         }}
       >
