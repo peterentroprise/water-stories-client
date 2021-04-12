@@ -30,6 +30,7 @@ const MapGraph = () => {
           nodeThreeObject={({ sprite }) => sprite}
           linkWidth={1}
           linkPositionUpdate={updateLinkPosition}
+          backgroundColor="#fff"
         />
       </>
     );
