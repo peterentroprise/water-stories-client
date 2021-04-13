@@ -7,7 +7,7 @@ const LayoutComponent = (props) => {
         p="1rem"
         pt="5rem"
         w="100%"
-        h="100vh"
+        h="100%"
         direction="column"
         alignItems="center"
         justifyContent="flex-start"
