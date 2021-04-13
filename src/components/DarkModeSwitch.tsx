@@ -8,7 +8,7 @@ export const DarkModeSwitch = () => {
       position="fixed"
       top="1rem"
       right="1rem"
-      colorScheme="purple"
+      colorScheme="blue"
       isChecked={isDark}
       onChange={toggleColorMode}
     />

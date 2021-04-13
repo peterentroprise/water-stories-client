@@ -9,6 +9,8 @@ const breakpoints = createBreakpoints({
 });
 
 const theme = extendTheme({
+  initialColorMode: "light",
+  useSystemColorMode: true,
   colors: {
     black: "#262626",
     gray: {
@@ -45,6 +47,21 @@ const theme = extendTheme({
     Button: {
       baseStyle: {
         borderRadius: "16px",
+      },
+    },
+  },
+  styles: {
+    global: {
+      ".map-node": {
+        fontFamily: "Mulish",
+        fontSize: "14px",
+        backgroundColor: "rgb(255 255 255)",
+        borderRadius: "8px",
+        paddingLeft: "8px",
+        paddingRight: "8px",
+        paddingTop: "8px",
+        paddingBottom: "8px",
+        textAlign: "center",
       },
     },
   },

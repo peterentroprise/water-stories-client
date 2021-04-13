@@ -13,8 +13,8 @@ const MapGraph = () => {
     let nodesWithSprites = await Promise.all(
       data.nodes.map((node) =>
         renderToSprite(<MapNode label={node.name} level={node.level} />, {
-          width: 120,
-          height: 60,
+          width: 128,
+          height: 64,
         }).then((sprite) => ({ ...node, sprite }))
       )
     );
@@ -30,7 +30,7 @@ const MapGraph = () => {
           nodeThreeObject={({ sprite }) => sprite}
           linkWidth={1}
           linkPositionUpdate={updateLinkPosition}
-          backgroundColor="#fff"
+          backgroundColor="#ffffff00"
         />
       </>
     );

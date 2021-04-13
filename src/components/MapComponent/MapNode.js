@@ -1,22 +1,11 @@
 import React from "react";
 
-const MapNode = ({ label, level }) => {
+import { Tag } from "@chakra-ui/react";
+
+const MapNode = ({ label, level }, props) => {
   return (
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <div
-        style={{
-          // color: "rgb(198 15 255)",
-          fontFamily: "Mulish",
-          fontSize: "14px",
-          backgroundColor: "rgb(198 15 255)",
-          borderRadius: "8px",
-          paddingLeft: "8px",
-          paddingRight: "8px",
-          paddingTop: "8px",
-          paddingBottom: "8px",
-          textAlign: "center",
-        }}
-      >
+      <div className="map-node" {...props}>
         {label} - {level}
       </div>
     </div>

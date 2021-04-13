@@ -76,6 +76,12 @@ const Index = () => (
             <LinkIcon />
           </ChakraLink>
         </ListItem>
+        <ListItem>
+          <ChakraLink href="/stories" flexGrow={1} mr={2}>
+            Stories
+            <LinkIcon />
+          </ChakraLink>
+        </ListItem>
       </List>
       <Text>
         Merging the finite with the infinite. Lorem ipsum dolor sit amet,
