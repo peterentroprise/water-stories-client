@@ -1,7 +1,9 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Tag, Box, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import Link from "../LinkComponent";
+
+const MotionBox = motion(Box);
 
 const transition = {
   duration: 1,
@@ -22,18 +24,19 @@ const backVariants = {
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
 };
 
-const StoryComponent = ({ id }) => {
+const StoryComponent = ({ id, story }) => {
   return (
     <>
-      <motion.div className="single" initial="exit" animate="enter" exit="exit">
-        <motion.img
-          variants={imageVariants}
-          src={`https://uploads-ssl.webflow.com/5e2f7d4ac8eec2386bad1415/5e5c2eb163723e27a2ab4a09_WaterCourse.jpg`}
-          alt="The Barbican"
-        />
-        <motion.div className="back" variants={backVariants}>
+      <MotionBox initial="exit" animate="enter" exit="exit">
+        <MotionBox p="1rem" variants={imageVariants}>
+          <Image borderRadius="1rem" src={story.video} alt="Moat" />
+        </MotionBox>
+        <MotionBox p="1rem" variants={backVariants}>
           <>
-            <Text>id:{id}</Text>
+            <Text>{story.title}</Text>
+            <Text>{id}</Text>
+            <Text>{story.description}</Text>
+            <Tag>{story.tag}</Tag>
             <Link
               href="/stories"
               mt={1}
@@ -42,11 +45,11 @@ const StoryComponent = ({ id }) => {
               lineHeight="normal"
               fontWeight="semibold"
             >
-              Stories
+              Back To Stories
             </Link>
           </>
-        </motion.div>
-      </motion.div>
+        </MotionBox>
+      </MotionBox>
     </>
   );
 };
