@@ -2,7 +2,7 @@ import { Box, Text, Image, Link } from "@chakra-ui/react";
 
 export const StoryCard = () => {
   return (
-    <Box p={4} display={{ md: "flex" }}>
+    <Box height="100%" p={4} display={{ md: "flex" }}>
       <Box flexShrink={0}>
         <Image
           borderRadius="1rem"

@@ -4,13 +4,15 @@ export const StoryContainer = (props) => {
   const { colorMode } = useColorMode();
 
   const bgColor = {
-    light: "rgba( 255, 255, 255, 0.25 )",
+    light: "rgba( 255, 255, 255, 0.37 )",
     dark: "rgba( 0, 0, 0, 0.25 )",
   };
 
   const color = { light: "black", dark: "white" };
   return (
     <Flex
+      height="calc(90vh - 17px)"
+      mb="1rem"
       sx={{
         boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
         backdropFilter: "blur( 4px )",
