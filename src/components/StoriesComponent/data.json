@@ -1,0 +1,25 @@
+{
+  "stories": [
+    {
+      "id": "1",
+      "title": "Take Me There",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis mi semper, hendrerit quam at, tempor erat. Mauris dapibus metus tortor, ut pulvinar augue accumsan a. Sed non euismod eros, euismod auctor ligula.",
+      "video": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_483601959_2000132420009280395_142366.jpg",
+      "tag": "Dope Thing"
+    },
+    {
+      "id": "2",
+      "title": "Nature isn't going to grow itself.",
+      "description": "Merging the finite with the infinite. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "video": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_483601959_2000132420009280395_142366.jpg",
+      "tag": "Dope Thing"
+    },
+    {
+      "id": "3",
+      "title": "I've Seen What Makes You Cheer",
+      "description": "Maecenas in elit nisl. Etiam vulputate sed magna quis cursus. Suspendisse nisl ligula, porta vel convallis a, posuere quis lectus. In sed arcu venenatis, viverra metus sed, consectetur ex.",
+      "video": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_483601959_2000132420009280395_142366.jpg",
+      "tag": "Dope Thing"
+    }
+  ]
+}

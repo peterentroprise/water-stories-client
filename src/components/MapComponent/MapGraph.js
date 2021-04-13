@@ -4,9 +4,8 @@ import { ForceGraph3D } from "react-force-graph";
 import MapNode from "./MapNode";
 import renderToSprite from "./renderToSprite";
 import updateLinkPosition from "./updateLinkPosition";
-import data from "./data";
 
-const MapGraph = () => {
+const MapGraph = ({ data }) => {
   const [graphData, setGraphData] = useState(null);
 
   useEffect(async () => {

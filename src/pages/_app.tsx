@@ -1,14 +1,27 @@
 import "@fontsource/nanum-myeongjo/800.css";
 import "@fontsource/mulish/400.css";
 
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../theme";
 import { AppProps } from "next/app";
+import { useRouter } from "next/router";
+
+import { ChakraProvider } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
+
+import theme from "../theme";
+
+function handleExitComplete() {
+  if (typeof window !== "undefined") {
+    window.scrollTo({ top: 0 });
+  }
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </ChakraProvider>
   );
 }
