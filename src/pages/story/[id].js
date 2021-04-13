@@ -1,9 +1,18 @@
 import * as React from "react";
+import { motion } from "framer-motion";
+import { Box } from "@chakra-ui/react";
+
 import StoryComponent from "../../components/StoryComponent";
 import data from "../../components/StoriesComponent/data.json";
 
-const Page = ({ id, story }) => {
-  return <StoryComponent id={id} story={story} />;
+const MotionBox = motion(Box);
+
+const Story = ({ id, story }) => {
+  return (
+    <MotionBox initial="exit" animate="enter" exit="exit">
+      <StoryComponent id={id} story={story} />
+    </MotionBox>
+  );
 };
 
 export async function getStaticProps({ params }) {
@@ -31,4 +40,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default Page;
+export default Story;

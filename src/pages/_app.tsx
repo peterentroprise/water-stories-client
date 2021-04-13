@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+      <AnimatePresence onExitComplete={handleExitComplete}>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     </ChakraProvider>

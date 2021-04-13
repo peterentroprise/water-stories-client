@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ScrollSnap from "scroll-snap";
-import { motion } from "framer-motion";
 import { Box, forwardRef } from "@chakra-ui/react";
 
 import { StoryCard } from "./StoryCard";
-import { StoryContainer } from "./StoryContainer";
-import { StoryLayout } from "./StoryLayout";
+import CardComponent from "../CardComponent";
+import LayoutComponent from "../LayoutComponent";
 import Link from "../LinkComponent";
 
 import data from "./data";
 
-const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
-
 function callback() {
   console.log("snapped");
 }
-
-const MotionBox = motion(Box);
 
 class StoriesComponent extends React.Component {
   container = React.createRef();
@@ -37,36 +32,32 @@ class StoriesComponent extends React.Component {
 
   render() {
     return (
-      <MotionBox
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-      >
-        <StoryLayout>
-          <div
-            ref={this.container}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              position: "absolute",
-              overflow: "auto",
-              top: 0,
-              padding: 16,
-              left: 0,
-              width: "100%",
-              height: "100vh",
-            }}
-          >
-            {data.stories.map((story) => (
-              <StoryContainer key={story.id}>
-                <StoryCard story={story} />
-              </StoryContainer>
-            ))}
-          </div>
-        </StoryLayout>
-      </MotionBox>
+      <LayoutComponent>
+        <div
+          ref={this.container}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            overflow: "auto",
+            position: "absolute",
+            top: 0,
+            // left: 0,
+            paddingTop: "5rem",
+            paddingLeft: " 1rem",
+            paddingRight: " 1rem",
+
+            width: "100%",
+            height: "100vh",
+          }}
+        >
+          {data.stories.map((story) => (
+            <CardComponent key={story.id}>
+              <StoryCard story={story} />
+            </CardComponent>
+          ))}
+        </div>
+      </LayoutComponent>
     );
   }
 }
