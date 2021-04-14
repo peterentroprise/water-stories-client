@@ -80,19 +80,16 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
             </HStack>
           </Box>
           <ScrollArea pt="5" pb="6">
-            <SidebarLink
-              display={{ base: "block", lg: "none" }}
-              mb="2"
-              icon={<BsSearch />}
-            >
-              Search
-            </SidebarLink>
             <Stack pb="6">
-              <SidebarLink icon={<BsFillInboxFill />}>Inbox</SidebarLink>
-              <SidebarLink icon={<BsFillBookmarksFill />}>
-                Bookmarks
+              <SidebarLink href="/" icon={<BsFillInboxFill />}>
+                Water Root
               </SidebarLink>
-              <SidebarLink icon={<BsPencilSquare />}>Drafts</SidebarLink>
+              <SidebarLink href="/stories" icon={<BsFillBookmarksFill />}>
+                Stories
+              </SidebarLink>
+              <SidebarLink href="/map" icon={<BsPencilSquare />}>
+                Node Map
+              </SidebarLink>
             </Stack>
             <Stack>
               <NavSectionTitle>Members</NavSectionTitle>
@@ -112,7 +109,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
       </Box>
       <Box
         flex="1"
-        p={{ base: "0", md: "6" }}
+        p={{ md: "1rem" }}
         marginStart={{ md: "var(--sidebar-width)" }}
         position="relative"
         left={isOpen ? "var(--sidebar-width)" : "0"}
@@ -141,7 +138,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
             </Flex>
             <Flex direction="column" flex="1" overflow="auto" px="1rem" pt="8">
               <Heading size="md" fontWeight="extrabold" mb="6">
-                Product Vision
+                Water Stories
               </Heading>
               <Box maxW="300px" flex="1">
                 {children}
@@ -191,10 +188,10 @@ const NavBreadcrumb = (props: BreadcrumbProps) => (
     }
   >
     <BreadcrumbItem color="inherit">
-      <BreadcrumbLink>Welcome</BreadcrumbLink>
+      <BreadcrumbLink>Water Stories</BreadcrumbLink>
     </BreadcrumbItem>
     <BreadcrumbItem color="inherit" isCurrentPage>
-      <BreadcrumbLink>Product Vision</BreadcrumbLink>
+      <BreadcrumbLink>Take Me There</BreadcrumbLink>
     </BreadcrumbItem>
   </Breadcrumb>
 );
@@ -257,7 +254,6 @@ const useMobileMenuState = () => {
 
 const NavSectionTitle = (props: TextProps) => (
   <Text
-    casing="uppercase"
     fontSize="xs"
     fontWeight="semibold"
     letterSpacing="wide"
