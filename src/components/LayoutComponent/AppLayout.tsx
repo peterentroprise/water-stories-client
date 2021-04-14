@@ -66,15 +66,15 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
             whiteSpace="nowrap"
           >
             <HStack display="inline-flex">
-              <Avatar size="sm" name="Esther Collins" />
+              <Avatar size="sm" name="Peter Arnold" />
               <Box lineHeight="1">
-                <Text fontWeight="semibold">Esther Collins</Text>
+                <Text fontWeight="semibold">Peter Arnold</Text>
                 <Text
                   fontSize="xs"
                   mt="1"
                   color={mode("whiteAlpha.700", "gray.400")}
                 >
-                  esther-colls@chakra.com
+                  peter@entroprise.com
                 </Text>
               </Box>
             </HStack>
@@ -93,12 +93,6 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
                 Bookmarks
               </SidebarLink>
               <SidebarLink icon={<BsPencilSquare />}>Drafts</SidebarLink>
-            </Stack>
-            <Stack pb="6">
-              <NavSectionTitle>Chats</NavSectionTitle>
-              <SidebarLink>🎉 Inbox</SidebarLink>
-              <SidebarLink>👍 Personal</SidebarLink>
-              <SidebarLink>🦋 Work</SidebarLink>
             </Stack>
             <Stack>
               <NavSectionTitle>Members</NavSectionTitle>
@@ -139,17 +133,17 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
               align="center"
               px="10"
             >
-              <Flex align="center" minH="8">
+              <Flex align="center" minH="8" pl=".5rem">
                 <MobileMenuButton onClick={toggle} isOpen={isOpen} />
                 <NavBreadcrumb />
               </Flex>
               <SearchInput />
             </Flex>
-            <Flex direction="column" flex="1" overflow="auto" px="10" pt="8">
+            <Flex direction="column" flex="1" overflow="auto" px="1rem" pt="8">
               <Heading size="md" fontWeight="extrabold" mb="6">
                 Product Vision
               </Heading>
-              <Box maxW="container.sm" flex="1">
+              <Box maxW="300px" flex="1">
                 {children}
               </Box>
             </Flex>
