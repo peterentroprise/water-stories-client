@@ -1,6 +1,6 @@
 import { Box, Flex, Text, AspectRatio, Image, Tag } from "@chakra-ui/react";
 
-import Link from "../LinkComponent";
+import Link from "../CompLink";
 
 export const StoryContent = ({ story }) => {
   return (
@@ -22,7 +22,7 @@ export const StoryContent = ({ story }) => {
             fontSize="lg"
             lineHeight="normal"
             fontWeight="semibold"
-            href={`/story/${story.id}`}
+            href={`/app/story/${story.id}`}
           >
             {story.title}
           </Link>

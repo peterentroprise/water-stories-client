@@ -2,16 +2,19 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
 
-import StoryComponent from "../../components/StoryComponent";
-import data from "../../components/StoriesComponent/data.json";
+import LayoutApp from "../../../components/LayoutApp";
+import PageStory from "../../../components/PageStory";
+import data from "../../../data/stories.json";
 
 const MotionBox = motion(Box);
 
 const Story = ({ id, story }) => {
   return (
-    <MotionBox initial="exit" animate="enter" exit="exit">
-      <StoryComponent id={id} story={story} />
-    </MotionBox>
+    <LayoutApp>
+      <MotionBox initial="exit" animate="enter" exit="exit">
+        <PageStory id={id} story={story} />
+      </MotionBox>
+    </LayoutApp>
   );
 };
 

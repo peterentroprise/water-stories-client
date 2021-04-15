@@ -1,7 +1,7 @@
-import IndexComponent from "../components/IndexComponent";
+import PageIndex from "../components/PageIndex";
 
 const Index = () => {
-  return <IndexComponent />;
+  return <PageIndex />;
 };
 
 export default Index;
