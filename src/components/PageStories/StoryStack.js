@@ -1,7 +1,11 @@
-import { Stack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 
 const StoryStack = ({ children }) => {
-  return <Stack spacing="1rem">{children}</Stack>;
+  return (
+    <VStack py="1.5rem" spacing="1rem" align="stretch">
+      {children}
+    </VStack>
+  );
 };
 
 export default StoryStack;

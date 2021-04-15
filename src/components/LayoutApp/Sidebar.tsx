@@ -12,9 +12,9 @@ import { SidebarAccount } from "./SidebarAccount";
 import { SidebarLink } from "./SidebarLink";
 import DarkModeSwitch from "../CompDarkModeSwitch";
 
-type SidebarNavProps = {};
+type SidebarProps = {};
 
-export const SidebarNav: React.FC<SidebarNavProps> = () => {
+export const Sidebar: React.FC<SidebarProps> = () => {
   return (
     <Box
       as="nav"

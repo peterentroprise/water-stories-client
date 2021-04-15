@@ -1,23 +1,48 @@
-import { Box, Flex, Text, AspectRatio, Image, Tag } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  AspectRatio,
+  Image,
+  Tag,
+  useColorMode,
+} from "@chakra-ui/react";
 
 import Link from "../CompLink";
 
 export const StoryContent = ({ story }) => {
+  const { colorMode } = useColorMode();
+
+  const bgColor = {
+    light: "rgba( 255, 255, 255, 0.5 )",
+    dark: "rgba( 0, 0, 0, 0.25 )",
+  };
+
+  const color = { light: "black", dark: "white" };
   return (
-    <Box width="100%">
+    <Box
+      borderRadius="2xl"
+      bg={bgColor[colorMode]}
+      color={color[colorMode]}
+      sx={{
+        backdropFilter: "blur( 4px )",
+        WebkitBackdropFilter: "blur( 4px )",
+        borderRadius: "2xl",
+      }}
+    >
       <AspectRatio ratio={16 / 9}>
         <Image
-          borderTopLeftRadius="xl"
-          borderTopRightRadius="xl"
+          borderRadius="md"
+          borderTopLeftRadius="2xl"
+          borderTopRightRadius="2xl"
           src={story.video}
           alt="Moat"
           objectFit="cover"
         />
       </AspectRatio>
       <Box p="1rem">
-        <Box mb=".5rem">
+        <Box mt=".5rem">
           <Link
-            mt={1}
             display="block"
             fontSize="lg"
             lineHeight="normal"
@@ -26,12 +51,10 @@ export const StoryContent = ({ story }) => {
           >
             {story.title}
           </Link>
-          <Text maxW="100%" isTruncated>
-            {story.description}
-          </Text>
+          <Text mt=".5rem">{story.description}</Text>
         </Box>
 
-        <Flex alignItems="baseline">
+        <Flex my=".5rem" alignItems="baseline">
           <Tag colorScheme="blackAlpha">{story.tag}</Tag>
         </Flex>
       </Box>

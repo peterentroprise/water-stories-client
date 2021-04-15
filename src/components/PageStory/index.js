@@ -1,7 +1,6 @@
 import { Text, Tag, Box, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
-import CardComponent from "../CardComponent";
 import CompLink from "../CompLink";
 
 const MotionBox = motion(Box);
@@ -22,9 +21,9 @@ const contentVariants = {
 
 const PageStory = ({ id, story }) => {
   return (
-    <CardComponent>
+    <>
       <MotionBox p="1rem" variants={imageVariants}>
-        <Image borderRadius="1rem" src={story.video} alt="Moat" />
+        <Image borderRadius="md" src={story.video} alt="Moat" />
       </MotionBox>
       <MotionBox p="1rem" variants={contentVariants}>
         <>
@@ -44,7 +43,7 @@ const PageStory = ({ id, story }) => {
           </CompLink>
         </>
       </MotionBox>
-    </CardComponent>
+    </>
   );
 };
 
