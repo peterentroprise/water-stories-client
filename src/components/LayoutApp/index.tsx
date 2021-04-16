@@ -3,6 +3,7 @@ import { Flex, useColorModeValue as mode } from "@chakra-ui/react";
 
 import { Sidebar } from "./Sidebar";
 import { Main } from "./Main";
+import LottieBg from "../CompLottieBg";
 
 type LayoutAppProps = {};
 
@@ -17,6 +18,7 @@ const LayoutApp: React.FC<LayoutAppProps> = ({ children }) => {
       overflow="hidden"
       sx={{ "--sidebar-width": "256px" }}
     >
+      <LottieBg />
       <Sidebar />
       <Main>{children}</Main>
     </Flex>
