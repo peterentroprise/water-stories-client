@@ -11,10 +11,10 @@ const LayoutApp: React.FC<LayoutAppProps> = ({ children }) => {
   return (
     <Flex
       height="100vh"
-      bgGradient={mode(
-        "linear(to-tr, teal.200, blue.500)",
-        "linear(to-tr, teal.200, blue.500)"
-      )}
+      // bgGradient={mode(
+      //   "linear(to-tr, teal.200, blue.500)",
+      //   "linear(to-tr, teal.200, blue.500)"
+      // )}
       overflow="hidden"
       sx={{ "--sidebar-width": "256px" }}
     >
