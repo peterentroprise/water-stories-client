@@ -14,8 +14,7 @@ export const MainMenuButton: React.FC<MainMenuButtonProps> = ({
   return (
     <Box
       display={{ md: "none" }}
-      ml="-.5rem"
-      mr=".5rem"
+      mr="1rem"
       as="button"
       type="button"
       rounded="md"

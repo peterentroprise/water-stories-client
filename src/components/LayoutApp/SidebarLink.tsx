@@ -20,14 +20,15 @@ export const SidebarLink = (props: SidebarLinkProps) => {
   return (
     <CompLink href={href}>
       <Box
-        as="a"
         display="block"
         py=".5rem"
         px="1rem"
         rounded="md"
-        borderTopRightRadius="2xl"
         cursor="pointer"
-        _hover={{ color: "white", bg: mode("blue.700", "gray.600") }}
+        _hover={{
+          color: mode("white", "white"),
+          bg: mode("blue.600", "gray.600"),
+        }}
       >
         <HStack>
           <Box>{icon}</Box>

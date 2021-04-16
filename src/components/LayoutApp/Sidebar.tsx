@@ -22,17 +22,18 @@ export const Sidebar: React.FC<SidebarProps> = () => {
       flex="1"
       width="var(--sidebar-width)"
       left="0"
-      p="1rem"
+      px="1rem"
+      mt="4rem"
       position="fixed"
     >
       <Box fontSize="sm" lineHeight="tall">
-        <SidebarAccount />
         <SidebarScrollStack>
+          <SidebarAccount />
           <SidebarLink href="/" icon={<HiOutlineGlobe />}>
             Marketing
           </SidebarLink>
           <SidebarLink href="/app" icon={<HiOutlineHome />}>
-            App Root
+            Application
           </SidebarLink>
           <SidebarLink href="/app/stories" icon={<HiOutlineBookOpen />}>
             Stories

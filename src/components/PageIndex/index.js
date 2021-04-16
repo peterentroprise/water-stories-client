@@ -1,11 +1,23 @@
-import { Box } from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, Button } from "@chakra-ui/react";
 import CompLink from "../CompLink";
 
 const PageIndex = () => {
   return (
-    <Box p="4rem">
-      <CompLink href="/app">Go To App</CompLink>
-    </Box>
+    <Flex width="full" p="4rem" align="center" direction="column">
+      <Box>
+        <Heading size="xl" fontWeight="extrabold">
+          Water Stories
+        </Heading>
+      </Box>
+      <Box>
+        <Text>Marketing Site</Text>
+      </Box>
+      <Box mt="2rem">
+        <CompLink href="/app">
+          <Button>Go To App</Button>
+        </CompLink>
+      </Box>
+    </Flex>
   );
 };
 

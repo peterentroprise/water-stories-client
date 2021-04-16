@@ -2,7 +2,6 @@ import * as React from "react";
 import {
   Box,
   Flex,
-  Heading,
   useColorMode,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
@@ -28,15 +27,15 @@ export const Main: React.FC<MainProps> = ({ children }) => {
   return (
     <Box
       flex="1"
-      p={{ md: "1rem" }}
-      pt={{ md: "5rem" }}
+      px={{ md: "1rem" }}
+      marginTop={{ md: "4rem" }}
       marginStart={{ md: "var(--sidebar-width)" }}
+      marginEnd={{ xl: "var(--sidebar-width)" }}
       position="relative"
       left={isOpen ? "var(--sidebar-width)" : "0"}
       transition="left 0.2s"
     >
       <Box
-        maxW="container.md"
         height="100%"
         overflow="hidden"
         rounded={{ md: "2xl" }}
@@ -57,7 +56,7 @@ export const Main: React.FC<MainProps> = ({ children }) => {
             align="center"
             px="1rem"
           >
-            <Flex align="center" minH=".5rem" pl=".5rem">
+            <Flex align="center" minH=".5rem">
               <MainMenuButton onClick={toggle} isOpen={isOpen} />
               <MainNavBreadcrumbs />
             </Flex>
@@ -67,7 +66,6 @@ export const Main: React.FC<MainProps> = ({ children }) => {
             direction="column"
             flex="1"
             px="1rem"
-            pt="1rem"
             overflowY="auto"
             sx={{
               "&::-webkit-scrollbar-track": {
@@ -82,9 +80,6 @@ export const Main: React.FC<MainProps> = ({ children }) => {
               },
             }}
           >
-            <Heading size="md" fontWeight="extrabold" mb="1rem">
-              Water Stories
-            </Heading>
             <Box flex="1">{children}</Box>
           </Flex>
         </Flex>

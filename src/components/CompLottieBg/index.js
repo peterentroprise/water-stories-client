@@ -1,15 +1,13 @@
-import Lottie from "lottie-react";
 import { useLottie } from "lottie-react";
-import { AspectRatio, Image } from "@chakra-ui/react";
+
+import { useColorModeValue } from "@chakra-ui/react";
 
 import nature from "./nature.json";
-// import night from "./night.json";
-// import lake from "./lake.json";
-// import construction from "./construction.json";
+import night from "./night.json";
 
 const LottieBg = () => {
   const options = {
-    animationData: nature,
+    animationData: useColorModeValue(nature, night),
     loop: true,
     autoplay: true,
     rendererSettings: {

@@ -39,7 +39,7 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: "Nanum Myeongjo",
+    heading: "Canela",
     body: "Mulish",
   },
   breakpoints,

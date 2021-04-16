@@ -14,13 +14,13 @@ export const SidebarAccount: React.FC<SidebarAccountProps> = () => {
     <Box
       as="a"
       href="#"
-      p="1rem"
+      px="1rem"
+      py=".5rem"
       display="block"
       transition="background 0.1s"
       rounded="md"
-      borderTopRightRadius="2xl"
       cursor="pointer"
-      _hover={{ color: "white", bg: mode("blue.700", "gray.600") }}
+      _hover={{ color: "white", bg: mode("blue.600", "gray.600") }}
       whiteSpace="nowrap"
     >
       <HStack display="inline-flex">

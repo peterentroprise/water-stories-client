@@ -1,7 +1,11 @@
-import { Text } from "@chakra-ui/react";
+import { Heading, Box } from "@chakra-ui/react";
 
 const PageApp = () => {
-  return <Text>Hello Universe</Text>;
+  return (
+    <Box>
+      <Heading size="3xl">Hello Universe</Heading>
+    </Box>
+  );
 };
 
 export default PageApp;

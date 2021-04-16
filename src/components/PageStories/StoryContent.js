@@ -55,7 +55,7 @@ export const StoryContent = ({ story }) => {
         </Box>
 
         <Flex my=".5rem" alignItems="baseline">
-          <Tag colorScheme="blackAlpha">{story.tag}</Tag>
+          <Tag>{story.tag}</Tag>
         </Flex>
       </Box>
     </Box>

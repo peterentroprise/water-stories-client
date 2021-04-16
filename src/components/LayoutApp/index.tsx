@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Flex, useColorModeValue as mode } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
+import { AppBar } from "./AppBar";
 import { Sidebar } from "./Sidebar";
 import { Main } from "./Main";
 import LottieBg from "../CompLottieBg";
@@ -19,6 +20,7 @@ const LayoutApp: React.FC<LayoutAppProps> = ({ children }) => {
       sx={{ "--sidebar-width": "256px" }}
     >
       <LottieBg />
+      <AppBar />
       <Sidebar />
       <Main>{children}</Main>
     </Flex>
