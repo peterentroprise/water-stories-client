@@ -28,6 +28,7 @@ export const Main: React.FC<MainProps> = ({ children }) => {
     <Box
       flex="1"
       px={{ md: "1rem" }}
+      pb={{ md: "1rem" }}
       marginTop={{ md: "4rem" }}
       marginStart={{ md: "var(--sidebar-width)" }}
       marginEnd={{ xl: "var(--sidebar-width)" }}
